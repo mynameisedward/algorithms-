@@ -1,2 +1,2 @@
-# algorithms
+# algorithmss
 изучение алгоритмов
