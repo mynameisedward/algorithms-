@@ -15,7 +15,7 @@ function algo(arr) {
         }
     }
 
-    console.log(`max: ${max}, max-2: ${max2}`)
+    console.log(`max-1: ${max}, max-2: ${max2}`)
 }
 
 algo(arr)
