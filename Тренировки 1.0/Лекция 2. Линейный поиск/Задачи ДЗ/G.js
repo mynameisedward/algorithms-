@@ -1,7 +1,3 @@
-let test = [-5, -5, 2, 1, -6, 6, 6]
-
-
-
 function algo(arr) {
     let max1 = arr[0]
     let max2 = arr[1]
@@ -9,13 +5,11 @@ function algo(arr) {
     let min1 = arr[0]
     let min2 = arr[1]
 
-    
-
     for(let i = 0; i <= arr.length; i++) {
-        if(arr[i] > max1) {
+        if(arr[i] >= max1) {
             max2 = max1
             max1 = arr[i]
-        } else if((arr[i] > max2) && (arr[i] < max1)) {
+        } else if((arr[i] >= max2) && (arr[i] < max1)) {
             max2 = arr[i]
         } else if(arr[i] < max2) continue
     }
@@ -37,19 +31,19 @@ function algo(arr) {
     let maxMultiply = max[0] * max[1]
     let minMultiply = min[0] * min[1]
 
-    console.log(max)
-    console.log(min)
+    if(maxMultiply == minMultiply) {
+        console.log(max.join(' '))
+    } else if(maxMultiply > minMultiply) {
+        console.log(max.join(' '))
+    } else if(minMultiply > maxMultiply) {
+        console.log(min.join(' '))
+    }
 
-    // if(maxMultiply == minMultiply) {
-    //     console.log(max.join(' '))
-    // } else if(maxMultiply > minMultiply) {
-    //     console.log(max.join(' '))
-    // } else if(minMultiply > maxMultiply) {
-    //     console.log(min.join(' '))
-    // }
+    console.log(max, min)
 }
 
-algo(test)
+let test = [1, -1]
 
+algo(test)
 
 
