@@ -1,1 +1,1 @@
-console.log(typeof Number(","))
+console.log([1, 5, -1, 7, -10].sort())
