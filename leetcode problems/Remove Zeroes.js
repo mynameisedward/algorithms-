@@ -1,23 +1,18 @@
 
 
 function removeZeroes(nums) {
-    let k = 0
-    let i = -1
+    w = 0
 
-
-    while(k < nums.length) {
-        if((nums[k] != 0) && (nums[i] == 0)) {
-            [nums[k], nums[i]] = [nums[i], nums[k]]
-            i += 1
-        } else if(nums[i] != 0) {
-            i += 1
+    for(let r in nums) {
+        if(nums[r] != 0) {
+            [nums[w], nums[r]] = [nums[r], nums[w]]
+            w += 1
         }
-        k += 1
     }
 }
-//        k                      *
+//        w                      * 
 //            [1, 2, 5, 0, 0, 0, 4]
-//        i             *
+//        r                      *
 
 let yo = [1, 2, 5, 0, 0, 0, 4]
 
