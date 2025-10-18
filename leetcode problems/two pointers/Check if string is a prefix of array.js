@@ -25,6 +25,3 @@ function isPrefixString(s, words) {
 
     return s.length == sPointer
 }
-
-console.log(isPrefixString('z', ['z']))
-console.log('------')

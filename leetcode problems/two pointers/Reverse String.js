@@ -1,43 +1,17 @@
-// --------------- Задача ---------------
-//                Перевернуть строку
+function reverseString(str) {
+    let arr = Array.from(str)
 
-// --------------- Решение ---------------
-//          Используем метод двух указателей
+    let left = 0
+    let right = arr.length - 1
 
+    while(left < right) {
+        [arr[left], arr[right]] = [arr[right], arr[left]]
 
-
-
-function reverseString(s) {
-    let result = s
-
-    for(let i = 0, j = s.length - 1; i != j; ) {
-        let iElem = s[i]
-        let jElem = s[j]
-
-        s[i] = jElem
-        s[j] = iElem
-
-        if((j - i) == 1) break
-
-        i++
-        j--
-
+        left++
+        right--
     }
 
-    return result
-
+    return arr.join('')
 }
 
-let string = reverseString(['h', 'e', 'l', 'l', 'o'])
-
-// console.log(string)
-
-
-let str1 = 'hello'
-str2 = str1
-
-
-str2 = 'jello'
-
-console.log("str2", str2 )
-console.log(str1)
+console.log(reverseString('hello'))

@@ -1,6 +1,15 @@
 
+ *
+"iloveleetcode" 
 
-[1, 3, 5]
+  * 
+["i","love","leetcode","apples"]
 
-[2, 2, 7]
+symbolWordCount = 0
 
+for(let i in words) {
+    if(words[i][symbolWordCount] == str)     
+}
+
+
+return sPointer == s.length
