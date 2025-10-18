@@ -1,23 +1,16 @@
-let arr = [1, 2]
+function isSubsequence(s, t) {
+    let sPointer = 0
 
-function algo(arr) {
-    max = Math.max(arr[0], arr[1])
-    max2 = Math.min(arr[0], arr[1])
-
-    if(arr.length > 2) {
-        for(let elem of arr) {
-            if(elem > max) {
-                max2 = max
-                max = elem
-            } else if(elem > max2) {
-                max2 = elem
-            }
+    for(let i in t) {
+        if(t[i] == s[sPointer]) {
+            sPointer += 1
+            continue
+        } else {
+            continue
         }
     }
 
-    console.log(`max: ${max}, max-2: ${max2}`)
+    return sPointer == s.length
 }
 
-algo(arr)
-
-
+console.log(isSubsequence("abc", "ahbgd"))

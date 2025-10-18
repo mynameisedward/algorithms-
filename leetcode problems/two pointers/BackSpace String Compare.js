@@ -27,9 +27,24 @@ function backspaceCompare(s1, s2) {
     let j = s2.length - 1
 
     while((i >= 0) || (j >= 0)) {
+        i = getCurrentIndex(s1, i)
+        j = getCurrentIndex(s2, j)
 
+        if((i < 0) && (j < 0)) {
+            return true
+        } 
+        if((i < 0) || (j < 0)) {
+            return false
+        }
+        if(s1[i] != s2[j]) {
+            return false
+        }
+
+        i -= 1
+        j -= 1
     }
 
+    return true
     
 }
 
