@@ -4,6 +4,7 @@
 // If we had started at the first tree, we would only pick from trees [1,2].
 
 function totalFruit(fruits) {
+    
     let begin = 0
     let window_state = {}
     let result = 0
