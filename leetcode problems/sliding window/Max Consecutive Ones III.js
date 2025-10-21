@@ -29,10 +29,8 @@ var longestOnes = function(nums, k) {
 
     return result
 };
-
-
 // 2
 
-// |b
+//                |b
 // [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0]
-//              e|
+//                                e|
