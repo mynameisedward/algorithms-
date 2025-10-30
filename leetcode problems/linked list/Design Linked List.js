@@ -25,10 +25,10 @@ MyLinkedList.prototype.get = function(index) {
 }
 
 MyLinkedList.prototype.addAtHead = function(val) {
-    
+    this.addAtIndex(0, val)
 }
 MyLinkedList.prototype.addAtTail = function(val) {
-
+    this.addAtIndex(this.size, val)
 }
 
 MyLinkedList.prototype.addAtIndex = function(index, val) {
@@ -39,8 +39,8 @@ MyLinkedList.prototype.addAtIndex = function(index, val) {
 
 
     if(index === 0) {
-        
-
+        node.next = this.head
+        this.head = node
         return
     }
 
@@ -52,4 +52,23 @@ MyLinkedList.prototype.addAtIndex = function(index, val) {
     const old_link = current.next
     current.next = node
     node.next = old_link 
+}
+
+MyLinkedList.prototype.deleteAtIndex = function(index) {
+    if(index < 0 || index >= this.size) {
+        return
+    }
+
+    this.size -= 1
+
+    if(index === 0) {
+        this.head = this.head.next
+        return
+    }
+
+    let current = this.head
+    for(let i = 0; i < index - 1; i++) {
+        current = current.next
+    }
+    current.next = current.next.next
 }
