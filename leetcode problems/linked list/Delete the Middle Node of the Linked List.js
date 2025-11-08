@@ -29,4 +29,6 @@ function deleteMiddle(head) {
 
     return head
 }
+
+//repeat
     
