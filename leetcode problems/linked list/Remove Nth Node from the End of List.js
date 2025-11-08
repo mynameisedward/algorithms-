@@ -8,8 +8,7 @@ function ListNode(val, next) {
 
 function removeNthNode(head, n) {
 
-    let dummy = new ListNode()
-    dummy.next = head
+    let dummy = new ListNode(0, head)
     head = dummy
 
     let first = head
@@ -29,3 +28,5 @@ function removeNthNode(head, n) {
     return head.next
 
 }
+
+//repeat
