@@ -72,3 +72,5 @@ MyLinkedList.prototype.deleteAtIndex = function(index) {
     }
     current.next = current.next.next
 }
+
+// repeat
