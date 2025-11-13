@@ -1,0 +1,19 @@
+Map(2) {
+  1 => <ref *1> Node {
+    value: 1,
+    next: Node { value: 2, next: [Node], prev: [Circular *1], key: 2 },
+    prev: Node { value: 'head', next: [Circular *1], prev: null, key: null },
+    key: 1
+  },
+  2 => <ref *2> Node {
+    value: 2,
+    next: Node { value: 'tail', next: null, prev: [Circular *2], key: null },
+    prev: <ref *1> Node {
+      value: 1,
+      next: [Circular *2],
+      prev: [Node],
+      key: 1
+    },
+    key: 2
+  }
+}
