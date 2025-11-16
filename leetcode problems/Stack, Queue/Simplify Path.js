@@ -20,4 +20,4 @@ for(let elem of withoutSlash) {
 
 const result = '/' + stack.join('/')
 
-// console.log(result)
+// repeat
