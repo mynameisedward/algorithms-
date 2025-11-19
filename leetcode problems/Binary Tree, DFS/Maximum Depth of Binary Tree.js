@@ -18,3 +18,16 @@ function maxDepth(root) {
 
     return maxDepth
 }
+
+
+// using recursion
+var maxDepth = function(root) {
+    if(!root) {
+        return 0
+    }
+
+    let leftSubtree = maxDepth(root.left)
+    let rightSubtree = maxDepth(root.right)
+
+    return 1 + Math.max(leftSubtree, rightSubtree)
+};
