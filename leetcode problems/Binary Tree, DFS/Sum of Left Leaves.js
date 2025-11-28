@@ -8,8 +8,8 @@ function sumOfLeftLeaves(root) {
             sum += node.val
         }
 
-        stack.push([node.left, 'l'])
-        stack.push([node.right, 'r'])
+        node.left && stack.push([node.left, 'l'])
+        node.right && stack.push([node.right, 'r'])
     }
 
     return sum
