@@ -1,6 +1,4 @@
-// Input: nums = [1,1,0,1]
-// Output: 3
-// Explanation: After deleting the number in position 2, [1,1,1] contains 3 numbers with value of 1's.
+// Основная идея: Sliding Window, храним не более 1 нуля
 
 var longestSubarray = function(nums) {
     let k = 1
@@ -26,3 +24,5 @@ var longestSubarray = function(nums) {
 
     return result - 1
 };
+
+// repeat

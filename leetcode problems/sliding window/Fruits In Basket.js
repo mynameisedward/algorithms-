@@ -1,7 +1,6 @@
-// Input: fruits = [1,2,3,2,2]
-// Output: 4
-// Explanation: We can pick from trees [2,3,2,2].
-// If we had started at the first tree, we would only pick from trees [1,2].
+// Основная идея: Map + Sliding Window
+// создаем объект и если свойств больше чем 2, то поджимаем окно
+
 
 function totalFruit(fruits) {
     
@@ -32,3 +31,4 @@ function totalFruit(fruits) {
     return result
 }
 
+// repeat

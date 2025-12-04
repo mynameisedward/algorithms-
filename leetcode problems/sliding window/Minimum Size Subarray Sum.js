@@ -1,8 +1,5 @@
-// Input: target = 7, nums = [2,3,1,2,4,3]
-// Output: 2
-// Explanation: The subarray [4,3] has the minimal length under the problem constraint.
-
 // Решаем через Sliding Window
+// Основная идея: расширяем окошко и поджимаем его пока сумма больше target, фиксируя минимальный размер окна 
 
 
 var minSubArrayLen = function(target, nums) {
@@ -29,3 +26,5 @@ var minSubArrayLen = function(target, nums) {
     }
 
 };
+
+// repeat

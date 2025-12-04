@@ -1,7 +1,5 @@
-// Input: nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2
-// Output: 6
-// Explanation: [1,1,1,0,0,1,1,1,1,1,1]
-// Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
+// Основная идея: Sliding Window, считаем нули и поджимаем когда нулей становится больше чем можно
+
 
 var longestOnes = function(nums, k) {
     let begin = 0
@@ -29,8 +27,5 @@ var longestOnes = function(nums, k) {
 
     return result
 };
-// 2
 
-//                |b
-// [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0]
-//                                e|
+// repeat
