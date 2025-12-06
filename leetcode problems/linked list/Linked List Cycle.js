@@ -1,4 +1,4 @@
-
+// Основная идея: алгоритм Флойда
 
 function hasCycle(head) {
     let slow = head

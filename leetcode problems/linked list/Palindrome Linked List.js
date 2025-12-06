@@ -1,14 +1,5 @@
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} head
- * @return {boolean}
- */
+// Основная идея: берем половину, переворачиваем и сравниваем двумя указателями
+
 var isPalindrome = function (head) {
     function middleOfTheList(head) {
         let slow = head

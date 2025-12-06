@@ -1,5 +1,4 @@
-// Input: head = [1,2,3,4,5], n = 2
-// Output: [1,2,3,5]
+// Основная идея: dummy node + 2 указателя(даем фору первому)
 
 function ListNode(val, next) {
     this.val = (val===undefined ? 0 : val)

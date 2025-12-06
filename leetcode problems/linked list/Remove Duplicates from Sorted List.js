@@ -1,5 +1,4 @@
-// Input: head = [1,1,2,3,3]
-// Output: [1,2,3]
+// если текущий равняется следующему, то удаляем следующий
 
 function deleteDuplicates(head) {
     if(!(head)) {
