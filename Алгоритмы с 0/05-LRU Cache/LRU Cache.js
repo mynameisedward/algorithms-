@@ -1,36 +1,41 @@
+// Основная идея: doubly-linked-list как кэш
+//                HashMap как хранение значений     
+
+
 class Node {
-    constructor(value) {
-        this.value = value;
+    contructor(value) {
+        this.val = value;
+        this.key = null;
         this.next = null;
         this.prev = null;
-        this.key = null;
     }
 }
+
 
 /**
  * @param {number} capacity
  */
-class LRUCache {
-    constructor(capacity) {
-        this.capacity = capacity;
-        this.data = new Map()
+var LRUCache = function(capacity) {
+    this.capacity = capacity;
+    this.data = new Map()
 
-        this.head = new Node('head')
-        this.tail = new Node('tail')
+    this.head = new Node('head')
+    this.tail = new Node('tail')
 
-        this.head.next = this.tail
-        this.tail.prev = this.head
-    }
+    this.head.next = this.tail
+    this.tail.prev = this.head
 };
 
-LRUCache.prototype.remove = function (node) {
+LRUCache.prototype.remove = function(node) {
+    // просто удаляем ноду
     node.prev.next = node.next
     node.next.prev = node.prev
 }
 
-LRUCache.prototype.addAfterHead = function (node) {
-    let head_next = this.head.next
-
+LRUCache.prototype.addAfterHead = function(node) {
+    // просто аккуратно добавляем ноду после головы
+    const head_next = this.head.next
+    
     this.head.next.prev = node
     this.head.next = node
 
@@ -42,15 +47,17 @@ LRUCache.prototype.addAfterHead = function (node) {
  * @param {number} key
  * @return {number}
  */
-LRUCache.prototype.get = function (key) {
-    if (!(this.data.has(key))) {
+LRUCache.prototype.get = function(key) {
+    if(!(this.data.has(key))) {
         return -1
     }
+
     let node = this.data.get(key)
 
     this.remove(node)
     this.addAfterHead(node)
-    return node.value
+    
+    return node.val
 };
 
 /** 
@@ -58,19 +65,20 @@ LRUCache.prototype.get = function (key) {
  * @param {number} value
  * @return {void}
  */
-LRUCache.prototype.put = function (key, value) {
-    if (this.data.has(key)) {
-        let node = this.data.get(key)
+LRUCache.prototype.put = function(key, value) {
+    if(this.data.has(key)) {
+        const node = this.data.get(key)
         this.remove(node)
         this.addAfterHead(node)
         node.value = value
         return
     }
     if(this.data.size >= this.capacity) {
-        let node = this.tail.prev
+        const node = this.tail.prev
         this.remove(node)
         this.data.delete(node.key)
     }
+
     let newNode = new Node(value)
     newNode.key = key
 
@@ -86,3 +94,5 @@ LRUCache.prototype.put = function (key, value) {
  * var param_1 = obj.get(key)
  * obj.put(key,value)
  */
+
+// repeat

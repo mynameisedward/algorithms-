@@ -1,9 +1,11 @@
+// Основная идея: создаем пустые бакеты, 
+//                создаем хэш функцию
+//                и в каждой функции и используем хэш-функцию для нахождения индекса к какому бакету обращаться
+//                итерироваться по парам каждого бакета и делать то, что нам нужно
+
 var MyHashMap = function() {
     this.size = 743
-    this.buckets = Array(this.size).fill(null)
-    for(let i = 0; i < this.size; i++) {
-        this.buckets[i] = []
-    }
+    this.buckets = Array(this.size).fill([])
 }
 
 MyHashMap.prototype.hash = function(key) {
@@ -45,3 +47,5 @@ MyHashMap.prototype.remove = function(key) {
         }
     }
 }
+
+// repeat
