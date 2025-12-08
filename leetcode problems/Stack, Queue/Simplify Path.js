@@ -1,23 +1,21 @@
-let string = "/home/user//Documents/../Pictures"
+// Основная идея: делим по /, проходимся и добавляем в стек
 
-let withoutSlash = string.split('/')
 
-console.log(withoutSlash)
+var simplifyPath = function(path) {
+    const stack = []
+    const pathSplit = path.split("/")
 
-let stack = []
-
-for(let elem of withoutSlash) {
-    if((elem == '') || (elem == '/')) {
-        continue
-    } else if(elem == '..') {
-        if(stack.length > 0) {
+    for(let elem of pathSplit) {
+        if((elem === '.') || (elem === '')) {
+            continue
+        } else if(elem == '..') {
             stack.pop()
+        } else {
+            stack.push(elem)
         }
-    } else {
-        stack.push(elem)
     }
-}
 
-const result = '/' + stack.join('/')
+    return '/' + stack.join('/')
+};
 
-// repeat
+// repeatt

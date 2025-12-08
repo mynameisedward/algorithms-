@@ -1,3 +1,6 @@
+// Основная идея: если последний элемент стека равен текущему, то убираем последний элемент стека
+//                иначе ложим элемент в стек, 
+
 function removeDuplicates(s) {
     let stack = []
 
@@ -12,4 +15,4 @@ function removeDuplicates(s) {
     return stack.join("")
 }
 
-//repeat
+//repeatt

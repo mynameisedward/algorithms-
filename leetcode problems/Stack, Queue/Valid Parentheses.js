@@ -1,3 +1,6 @@
+// Основная идея: ложим в стек открывающие скобки, а если попалась закрывающая, 
+//                                                  то проверяем, соответсвует ли она паре
+
 function isValid(s) {
     const pairs = {
         '(': ')',
@@ -21,4 +24,4 @@ function isValid(s) {
     return stack.length == 0
 }
 
-//repeat 
+//repeatt

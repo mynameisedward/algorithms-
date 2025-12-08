@@ -1,7 +1,6 @@
-/**
- * @param {string} s
- * @return {string}
- */
+// Основная идея: добавляем в стек пока не встречаем ']'
+
+
 var decodeString = function(s) {
     let stack = []
     for(let char of s) {
@@ -21,7 +20,7 @@ var decodeString = function(s) {
             numb = last + numb
             last = stack.pop()
         }
-        stack.push(last)
+        stack.push(last)    
         stack.push(str.repeat(Number(numb)))
     }
     return stack.join("")

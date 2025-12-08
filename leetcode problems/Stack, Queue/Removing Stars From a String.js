@@ -1,3 +1,5 @@
+// Основная идея: если звездочка - убираем из стека элемет, иначе - добавляем
+
 function removeStars(s) {
     let stack = []
 
@@ -12,4 +14,4 @@ function removeStars(s) {
     return stack.join("")
 }
 
-// repeat
+// repeatt
