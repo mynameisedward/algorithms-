@@ -1,3 +1,5 @@
+// Основная идея: BFS, последний элемент указывает на null, не последний на queue[0]
+
 function connect(root) {
     if(!root) {
         return null
@@ -22,4 +24,4 @@ function connect(root) {
     return root
 }
 
-// repeat
+// repeatt

@@ -1,3 +1,5 @@
+// Основная идея: BFS
+
 function levelOrder(root) {
     if(!root) {
         return []
@@ -21,4 +23,4 @@ function levelOrder(root) {
     return result
 }
 
-// repeat
+// repeatt

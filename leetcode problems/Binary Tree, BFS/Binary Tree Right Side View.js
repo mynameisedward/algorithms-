@@ -1,3 +1,5 @@
+// Основная идея: BFS, закидываем в result последнюю ноду
+
 function rightSideView(root) {
     if(!root) {
         return []
@@ -21,4 +23,4 @@ function rightSideView(root) {
     return result
 }
 
-// repeat
+// repeatt

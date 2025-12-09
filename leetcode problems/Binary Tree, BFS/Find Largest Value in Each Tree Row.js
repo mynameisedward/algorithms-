@@ -1,3 +1,5 @@
+// Основная идея: BFS
+
 function largestValues(root) {
     if(!root) {
         return []
@@ -21,4 +23,4 @@ function largestValues(root) {
     return result
 }
 
-// repeat
+// repeatt
