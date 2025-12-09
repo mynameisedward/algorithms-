@@ -1,4 +1,5 @@
-// Using stack
+// Основная идея: DFS
+
 function searchBST(root, val) {
     const stack = [root]
 
@@ -37,4 +38,4 @@ function searchBST(root, val) {
     }
 }
 
-// repeat
+// repeatt

@@ -14,7 +14,7 @@ function intsertIntoBST(root, val) {
             } else {
                 const newNode = new TreeNode(val)
                 node.left = newNode
-                break
+                return root
             }
         } else {
             if(node.right) {
@@ -22,7 +22,7 @@ function intsertIntoBST(root, val) {
             } else {
                 const newNode = new TreeNode(val)
                 node.right = newNode
-                break
+                return root
             }
         }
     }
@@ -30,4 +30,4 @@ function intsertIntoBST(root, val) {
     return root
 }
 
-// repeat
+// repeatt
