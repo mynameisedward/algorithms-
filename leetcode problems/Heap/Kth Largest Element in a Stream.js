@@ -25,5 +25,7 @@ KthLargest.prototype.add = function(val) {
     while(this.heap.size() > this.k) {
         this.heap.dequeue()
     }
-    return this.heap.front()
+    return this.heap.front( )
 };
+
+// repeat

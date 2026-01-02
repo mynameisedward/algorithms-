@@ -1,9 +1,9 @@
-k=0
-for x1 in "1234567":
-    for x2 in "01234567":
-        for x3 in "01234567":
-            for x4 in "01234567":
-                s=x1+x2+x3+x4
-                if (x1==x2 and x2!=x4 and x3!=x4 and x3!=x1) or (x2==x3 and x3!=x4 and x1!=x2 and x1!=x4) or (x3==x4 and x4!=x1 and x2!=x1 and x3!=x2):
-                    k=+1
-print(k)
+arr = [3, 1, 7, 2, 9, 5]
+
+odd_numbers = [num for num in arr if num % 2 != 0]
+
+if odd_numbers:
+    sorted_descending = sorted(odd_numbers, reverse=True)
+    print("Нечётные числа в порядке убывания:", sorted_descending)
+else:
+    print("Нет нечётных чисел.")
