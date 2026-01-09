@@ -1,12 +1,15 @@
-const nums = [1, 1, 1, 1, 2, 2, 2, 3]
+const nums = [1,1,1,2,2,3]
 
-const myMap = new Map()
+const counter = new Map()
 for (let num of nums) {
-    if (myMap.has(num)) {
-        myMap.set(num, myMap.get(num) + 1)
+    if (!counter.get(num)) {
+        counter.set(num, 1)
     } else {
-        myMap.set(num, 1)
+        counter.set(num, counter.get(num) + 1)
     }
 }
 
-console.log(myMap)
+
+for(const [key, value] of counter.entries()) {
+    console.log(key, ':', value)
+}
