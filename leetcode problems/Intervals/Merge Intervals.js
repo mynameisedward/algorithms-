@@ -1,5 +1,6 @@
 // Основная идея: 1) сортируем по дате начала
 //                2) сравниваем с предыдущим, который лежит в массиве result
+//                           в массиве result лежит минимум 1 элемент 
 
 function merge(intervals) {
     intervals.sort((cur, next) => cur[0] - next[0])
@@ -19,3 +20,6 @@ function merge(intervals) {
 
     return result
 }
+
+
+// repeat
